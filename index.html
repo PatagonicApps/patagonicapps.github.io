@@ -18,18 +18,37 @@
       padding: 20px;
       text-align: center;
     }
+    header img {
+      max-height: 80px;
+      margin-bottom: 10px;
+    }
     main {
       padding: 30px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       background: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1 {
+    h1, h2 {
       margin-top: 0;
     }
     .app-section {
       margin-top: 40px;
+    }
+    .app-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .app-flex img {
+      max-width: 160px;
+      height: auto;
+      margin: 10px;
+    }
+    .app-flex div {
+      max-width: 500px;
+      margin: 10px;
     }
     .download-button {
       display: inline-block;
@@ -39,6 +58,12 @@
       text-decoration: none;
       border-radius: 5px;
       margin-top: 15px;
+    }
+    .screenshot {
+      max-width: 100%;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
     }
     footer {
       text-align: center;
@@ -50,14 +75,21 @@
 </head>
 <body>
   <header>
+    <img src="img/logo-patagonicapps.png" alt="Logo PatagonicApps">
     <h1>PatagonicApps</h1>
     <p>Aplicaciones Android pensadas para vos</p>
   </header>
   <main>
     <section class="app-section">
       <h2>📱 CalculaYa</h2>
-      <p>CalculaYa es una calculadora rápida, liviana y sin distracciones. Ideal para estudiantes, profesionales y usuarios que buscan eficiencia sin complicaciones.</p>
-      <a class="download-button" href="https://play.google.com/store/apps/details?id=com.PatagonicApps.calculaya" target="_blank">Descargar en Google Play</a>
+      <div class="app-flex">
+        <img src="img/logo-calculaya.png" alt="Logo CalculaYa">
+        <div>
+          <p>CalculaYa es una calculadora rápida, liviana y sin distracciones. Ideal para estudiantes, profesionales y usuarios que buscan eficiencia sin complicaciones.</p>
+          <a class="download-button" href="https://play.google.com/store/apps/details?id=com.PatagonicApps.calculaya" target="_blank">Descargar en Google Play</a>
+        </div>
+      </div>
+      <img class="screenshot" src="img/captura-calculaya.png" alt="Captura de CalculaYa">
     </section>
 
     <section class="app-section">
@@ -70,3 +102,4 @@
   </footer>
 </body>
 </html>
+
