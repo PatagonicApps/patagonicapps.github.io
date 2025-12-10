@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+.header-container {
+  display: flex;              /* Logo + textos en fila */
+  align-items: center;        /* Centrado vertical */
+  gap: 20px;                  /* Espacio entre logo y textos */
+  padding: 20px;
+  background-color: #f5f5f5;  /* Fondo suave */
+}
+
+.logo {
+  width: 150px;               /* Ajustá el tamaño del logo */
+  height: auto;
+}
+
+.header-texts h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header-texts p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Captura */
+.captura {
+  max-width: 600px;           /* Limita el ancho de la captura */
+  height: auto;
+  display: block;
+  margin: 20px auto;          /* Centrada en la página */
+}
+
+/* Responsive: en pantallas chicas logo arriba, textos abajo */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+}
