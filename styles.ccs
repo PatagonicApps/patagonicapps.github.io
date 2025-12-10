@@ -6,36 +6,53 @@ body {
 }
 
 /* Encabezado */
+header {
+  background: linear-gradient(90deg, #1e3c72, #2a5298); /* degradado azul */
+  color: white;
+  padding: 20px 40px;
+}
+
 .header-container {
-  display: flex;              /* Logo + textos en fila */
-  align-items: center;        /* Centrado vertical */
-  gap: 20px;                  /* Espacio entre logo y textos */
-  padding: 20px;
-  background-color: #f5f5f5;  /* Fondo suave */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
 }
 
 .logo {
-  width: 150px;               /* Ajustá el tamaño del logo */
+  width: 180px;   /* Logo más grande */
   height: auto;
 }
 
 .header-texts h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .header-texts p {
   margin: 0;
   font-size: 1.2rem;
-  color: #555;
+  opacity: 0.9;
 }
 
 /* Captura */
 .captura {
-  max-width: 600px;           /* Limita el ancho de la captura */
+  max-width: 400px;   /* Más chica que antes */
   height: auto;
   display: block;
-  margin: 20px auto;          /* Centrada en la página */
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 0.9rem;
 }
 
 /* Responsive: en pantallas chicas logo arriba, textos abajo */
@@ -46,7 +63,7 @@ body {
   }
 
   .logo {
-    width: 120px;
+    width: 140px;
     margin-bottom: 10px;
   }
 }
