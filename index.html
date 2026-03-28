@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>PatagonicApps</title>
-  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="img/logo-patagonicapps-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -14,44 +13,52 @@
       color: #333;
     }
     header {
-      background-image: url('img/banner-patagonicapps.jpg');
+      background-image: url('img/banner-patagonicapps.jpg'); /* tu banner */
       background-size: cover;
       background-position: center;
       padding: 80px 20px;
       text-align: center;
       color: white;
     }
-    .logo {
-      max-width: 120px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 2.5em;
+    header h1 {
+      font-size: 3em;
       margin: 0;
     }
-    p {
+    header p {
       font-size: 1.2em;
       margin-top: 10px;
     }
     main {
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    h2 {
-      color: #0066cc;
-      margin-top: 0;
+    .apps-grid {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
     }
-    .captura {
-      width: 100%;
-      max-width: 600px;
-      margin: 20px 0;
-      border-radius: 8px;
+    .app-card {
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      width: 200px;
     }
-    .playstore-btn img {
-      width: 160px;
+    .app-card:hover {
+      transform: scale(1.05);
+    }
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+      margin-bottom: 15px;
     }
     footer {
       text-align: center;
@@ -62,23 +69,33 @@
   </style>
 </head>
 <body>
+  <!-- Encabezado -->
   <header>
-    <img src="img/logo-patagonicapps.png" alt="Logo PatagonicApps" class="logo">
     <h1>PatagonicApps</h1>
     <p>Innovación en apps móviles</p>
   </header>
 
+  <!-- Contenido principal -->
   <main>
-    <section>
-      <h2>CalculaYa</h2>
-      <p>La nueva app para cálculos rápidos y eficientes.</p>
-      <img src="img/captura-calculaya.png" alt="Captura CalculaYa" class="captura">
-      <a href="https://play.google.com/store/apps/details?id=com.patagonicapps.calculaya" target="_blank" class="playstore-btn">
-        <img src="img/google-play-badge.png" alt="Disponible en Google Play">
+    <h2 style="text-align:center;">Mis Aplicaciones</h2>
+    <div class="apps-grid">
+      <!-- Rival Score -->
+      <a href="rival-score.html" class="app-card">
+        <img src="img/Rivals_icono.png" alt="Rival Score" class="app-icon">
+        <h3>Rival Score</h3>
+        <p>Seguimiento de resultados deportivos</p>
       </a>
-    </section>
+
+      <!-- CalculaYa -->
+      <a href="calculaya.html" class="app-card">
+        <img src="img/CalculaYa_icono.png" alt="CalculaYa" class="app-icon">
+        <h3>CalculaYa</h3>
+        <p>Cálculos rápidos y eficientes</p>
+      </a>
+    </div>
   </main>
 
+  <!-- Pie de página -->
   <footer>
     <p>&copy; 2026 PatagonicApps - Todos los derechos reservados</p>
   </footer>
