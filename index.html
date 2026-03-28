@@ -16,29 +16,23 @@
       background-image: url('img/banner-patagonicapps.jpg'); /* tu banner */
       background-size: cover;
       background-position: center;
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
-    }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
+      height: 300px; /* altura fija para el banner */
     }
     main {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
     .apps-grid {
       display: flex;
       gap: 40px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 40px;
+      margin-top: 20px;
     }
     .app-card {
       text-align: center;
@@ -69,15 +63,12 @@
   </style>
 </head>
 <body>
-  <!-- Encabezado -->
-  <header>
-    <h1>PatagonicApps</h1>
-    <p>Innovación en apps móviles</p>
-  </header>
+  <!-- Encabezado limpio con solo el banner -->
+  <header></header>
 
   <!-- Contenido principal -->
   <main>
-    <h2 style="text-align:center;">Mis Aplicaciones</h2>
+    <h2>Mis Aplicaciones</h2>
     <div class="apps-grid">
       <!-- Rival Score -->
       <a href="rival-score.html" class="app-card">
