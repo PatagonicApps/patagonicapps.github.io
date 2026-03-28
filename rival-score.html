@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Rival Score - PatagonicApps</title>
   <link rel="icon" type="image/png" href="img/logo-patagonicapps-icon.png">
-  <!-- Fuente moderna -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -26,29 +25,42 @@
       background: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-weight: 700;
-      font-size: 2.2em;
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 40px;
     }
-    p.intro {
-      text-align: center;
-      font-size: 1.2em;
-      margin-bottom: 20px;
-      color: #444;
+    .intro-text {
+      flex: 1;
+      min-width: 280px;
     }
-    ul.features {
-      list-style: disc;
-      padding-left: 40px;
-      max-width: 800px;
-      margin: 20px auto 40px auto;
+    .intro-text p {
+      font-size: 1.1em;
       line-height: 1.6em;
       color: #444;
-      font-size: 1.05em;
+      margin-bottom: 20px;
     }
-    ul.features li {
-      margin-bottom: 12px;
+    .intro-text ul {
+      list-style: disc;
+      padding-left: 20px;
+      line-height: 1.6em;
+      color: #444;
+    }
+    .intro-text ul li {
+      margin-bottom: 10px;
+    }
+    .intro-image {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+    .intro-image img {
+      max-width: 80%; /* achica la imagen al 80% del ancho disponible */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
     .screenshots {
       display: flex;
@@ -82,16 +94,21 @@
   <header></header>
 
   <main>
-    <h1>Rival Score</h1>
-    <p class="intro">La app que convierte tus partidos en historiales divertidos y competitivos.</p>
-
-    <ul class="features">
-      <li>Agregá a tus rivales y cada vez que cargues un resultado, ellos reciben una notificación inmediata.</li>
-      <li>El historial se actualiza en tiempo real y muestra quién domina la rivalidad.</li>
-      <li>Las estadísticas destacan las mayores rachas de victorias, derrotas, invictos y las goleadas más recordadas.</li>
-      <li>Podés sacar a relucir esa “paternidad” deportiva con datos claros y divertidos.</li>
-      <li>Si preferís un control personal, también podés crear un historial local que solo vos ves y administrás, sin necesidad de registrarte.</li>
-    </ul>
+    <div class="intro-section">
+      <div class="intro-text">
+        <p><strong>Rival Score</strong> es la app ideal para crear historiales entre amigos y registrar partidos de manera fácil.</p>
+        <ul>
+          <li>Agregá a tus rivales y cada vez que cargues un resultado, ellos reciben una notificación inmediata.</li>
+          <li>El historial se actualiza en tiempo real y muestra quién domina la rivalidad.</li>
+          <li>Las estadísticas destacan las mayores rachas de victorias, derrotas, invictos y las goleadas más recordadas.</li>
+          <li>Podés sacar a relucir esa “paternidad” deportiva con datos claros y divertidos.</li>
+          <li>Si preferís un control personal, también podés crear un historial local que solo vos ves y administrás, sin necesidad de registrarte.</li>
+        </ul>
+      </div>
+      <div class="intro-image">
+        <img src="img/capfuncionRivals.png" alt="Vista de función Rival Score">
+      </div>
+    </div>
 
     <div class="screenshots">
       <img src="img/cAP1.png" alt="Captura 1">
