@@ -18,6 +18,30 @@
       background-position: center;
       height: 300px;
     }
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
     main {
       padding: 40px 20px;
       max-width: 1000px;
@@ -57,7 +81,7 @@
       text-align: center;
     }
     .intro-image img {
-      max-width: 60%; /* ahora la imagen ocupa solo el 60% */
+      max-width: 60%; /* imagen reducida al 60% */
       height: auto;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -82,6 +106,19 @@
     .playstore-btn img {
       width: 180px;
     }
+    section {
+      margin: 40px auto;
+      max-width: 800px;
+    }
+    section h2 {
+      font-size: 1.6em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    section p {
+      line-height: 1.6em;
+      color: #444;
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -91,6 +128,16 @@
   </style>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.patagonicapps.rivalscore" target="_blank">Descargar</a></li>
+      <li><a href="#faq">Ayuda / FAQ</a></li>
+      <li><a href="#stats">Estadísticas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
   <header></header>
 
   <main>
@@ -123,6 +170,25 @@
         <img src="img/google-play-badge.png" alt="Disponible en Google Play">
       </a>
     </div>
+
+    <!-- Sección FAQ -->
+    <section id="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <p><strong>¿Necesito registrarme?</strong> No, podés usar el historial local sin registro.</p>
+      <p><strong>¿Mis rivales reciben notificaciones?</strong> Sí, cada vez que cargás un resultado ellos reciben un aviso inmediato.</p>
+      <p><strong>¿Qué pasa si pierdo conexión?</strong> Los resultados se guardan y se sincronizan cuando vuelvas a estar online.</p>
+    </section>
+
+    <!-- Sección Estadísticas -->
+    <section id="stats">
+      <h2>Estadísticas</h2>
+      <p>Rival Score guarda y muestra:</p>
+      <ul>
+        <li>Mayores rachas de victorias y derrotas.</li>
+        <li>Invictos prolongados.</li>
+        <li>Las goleadas más recordadas.</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
