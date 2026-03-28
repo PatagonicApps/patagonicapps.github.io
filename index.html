@@ -2,57 +2,122 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>PatagonicApps</title>
+  <title>Rival Score - PatagonicApps</title>
   <link rel="icon" type="image/png" href="img/logo-patagonicapps-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       background-color: #f4f4f4;
       color: #333;
     }
     header {
-      background-image: url('img/banner-patagonicapps.jpg'); /* tu banner */
+      background-image: url('img/banner-rivalscore.png');
       background-size: cover;
       background-position: center;
-      height: 300px; /* altura fija para el banner */
+      height: 300px;
+    }
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffcc00;
     }
     main {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    h2 {
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .intro-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .intro-text p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .intro-text ul {
+      list-style: disc;
+      padding-left: 20px;
+      line-height: 1.6em;
+      color: #444;
+    }
+    .intro-text ul li {
+      margin-bottom: 10px;
+    }
+    .intro-image {
+      flex: 1;
+      min-width: 280px;
       text-align: center;
+    }
+    .intro-image img {
+      max-width: 60%; /* imagen reducida al 60% */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .screenshots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
       margin-bottom: 30px;
     }
-    .apps-grid {
+    .screenshots img {
+      width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .playstore-btn {
       display: flex;
-      gap: 40px;
       justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
+      margin-bottom: 40px;
     }
-    .app-card {
-      text-align: center;
-      text-decoration: none;
-      color: #333;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-      width: 200px;
+    .playstore-btn img {
+      width: 180px;
     }
-    .app-card:hover {
-      transform: scale(1.05);
+    section {
+      margin: 40px auto;
+      max-width: 800px;
     }
-    .app-icon {
-      width: 120px;
-      height: 120px;
-      border-radius: 20px;
+    section h2 {
+      font-size: 1.6em;
       margin-bottom: 15px;
+      color: #333;
+    }
+    section p {
+      line-height: 1.6em;
+      color: #444;
     }
     footer {
       text-align: center;
@@ -63,32 +128,71 @@
   </style>
 </head>
 <body>
-  <!-- Encabezado limpio con solo el banner -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.patagonicapps.rivalscore" target="_blank">Descargar</a></li>
+      <li><a href="#faq">Ayuda / FAQ</a></li>
+      <li><a href="#stats">Estadísticas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
   <header></header>
 
-  <!-- Contenido principal -->
   <main>
-    <h2>Mis Aplicaciones</h2>
-    <div class="apps-grid">
-      <!-- Rival Score -->
-      <a href="rival-score.html" class="app-card">
-        <img src="img/Rivals_icono.png" alt="Rival Score" class="app-icon">
-        <h3>Rival Score</h3>
-        <p>Crea historiales y registra tus resultados de FIFA, PES, etc</p>
-      </a>
+    <div class="intro-section">
+      <div class="intro-text">
+        <p><strong>Rival Score</strong> es la app ideal para crear historiales entre amigos y registrar partidos de manera fácil.</p>
+        <ul>
+          <li>Agregá a tus rivales y cada vez que cargues un resultado, ellos reciben una notificación inmediata.</li>
+          <li>El historial se actualiza en tiempo real y muestra quién domina la rivalidad.</li>
+          <li>Las estadísticas destacan las mayores rachas de victorias, derrotas, invictos y las goleadas más recordadas.</li>
+          <li>Podés sacar a relucir esa “paternidad” deportiva con datos claros y divertidos.</li>
+          <li>Si preferís un control personal, también podés crear un historial local que solo vos ves y administrás, sin necesidad de registrarte.</li>
+        </ul>
+      </div>
+      <div class="intro-image">
+        <img src="img/capfuncionRivals.png" alt="Vista de función Rival Score">
+      </div>
+    </div>
 
-      <!-- CalculaYa -->
-      <a href="calculaya.html" class="app-card">
-        <img src="img/CalculaYa_icono.png" alt="CalculaYa" class="app-icon">
-        <h3>CalculaYa</h3>
-        <p>Cálculo de pedidos para repartidores de PedidosYa</p>
+    <div class="screenshots">
+      <img src="img/cAP1.png" alt="Captura 1">
+      <img src="img/cAP2.png" alt="Captura 2">
+      <img src="img/cAP3.png" alt="Captura 3">
+      <img src="img/cAP4.png" alt="Captura 4">
+      <img src="img/cAP5.png" alt="Captura 5">
+    </div>
+
+    <div class="playstore-btn">
+      <a href="https://play.google.com/store/apps/details?id=com.patagonicapps.rivalscore" target="_blank">
+        <img src="img/google-play-badge.png" alt="Disponible en Google Play">
       </a>
     </div>
+
+    <!-- Sección FAQ -->
+    <section id="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <p><strong>¿Necesito registrarme?</strong> No, podés usar el historial local sin registro.</p>
+      <p><strong>¿Mis rivales reciben notificaciones?</strong> Sí, cada vez que cargás un resultado ellos reciben un aviso inmediato.</p>
+      <p><strong>¿Qué pasa si pierdo conexión?</strong> Los resultados se guardan y se sincronizan cuando vuelvas a estar online.</p>
+    </section>
+
+    <!-- Sección Estadísticas -->
+    <section id="stats">
+      <h2>Estadísticas</h2>
+      <p>Rival Score guarda y muestra:</p>
+      <ul>
+        <li>Mayores rachas de victorias y derrotas.</li>
+        <li>Invictos prolongados.</li>
+        <li>Las goleadas más recordadas.</li>
+      </ul>
+    </section>
   </main>
 
-  <!-- Pie de página -->
   <footer>
-    <p>&copy; 2026 PatagonicApps - Todos los derechos reservados</p>
+    <a href="index.html">← Volver a PatagonicApps</a>
   </footer>
 </body>
 </html>
